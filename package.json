@@ -1,19 +1,16 @@
 {
-  "name": "koa",
-  "version": "0.0.1",
-  "description": "代理转发工具",
-  "main": "index.js",
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "dongyb-yog",
+  "author": "yby",
   "license": "ISC",
-  "dependencies": {
-    "http-proxy-middleware": "^1.0.3",
-    "koa-router": "^8.0.8",
-    "koa-static": "^5.0.0",
-    "koa2": "^2.0.0-alpha.7",
-    "koa2-connect": "^1.0.2",
-    "koa2-proxy-middleware": "^0.0.4"
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1"
   }
 }
