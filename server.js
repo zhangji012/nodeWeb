@@ -6,7 +6,7 @@ const { port=8000, proxy:proxyConfig={} } = require('./serverConfig');
 const app = express();
  
 app.use('/', express.static(path.join(__dirname, 'dist')))
- 
+
 Object.keys(proxyConfig).map(key=>{
     app.use(key, proxy(proxyConfig[key]));
 })
