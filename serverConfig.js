@@ -14,24 +14,29 @@ module.exports = {
    */
   proxy: {
     "/api": {
-      "target": "http://person.veryeast.cn",
+      "target": "http://person",
       "changeOrigin": true,
       "pathRewrite": { "^/api" : "" }
     },
     "/file":{
-      "target" :"https://dfws-file.veimg.cn",
+      "target" :"https://dfws",
       "changeOrigin": true,
       "pathRewrite": { "^/file" : "" }
     },
     "/search": {
-      "target" :"https://search.veryeast.cn",
+      "target" :"https://search",
       "changeOrigin": true,
       "pathRewrite": { "^/search" : "" }
     },
     "/sso": {
-      "target" :"https://sso.veryeast.cn",
+      "target" :"https://sso",
       "changeOrigin": true,
       "pathRewrite": { "^/sso" : "" }
+    },
+    "/api": {
+      "target": "http://dfws-file.veimg.cn",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api": "" }
     }
   },
 }

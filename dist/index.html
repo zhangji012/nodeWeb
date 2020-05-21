@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="root3"></div>
+
+    <script>
+      var bb = new Date()
+      var time = bb.getTime()
+      var url =
+        '/api/dict/ve/cn/mobile/all.json?jsoncallback=jsoncallback&aa=' + time
+
+      var instance = axios.create({
+        baseURL: url,
+        timeout: 1000,
+        headers: {
+          'Content-Type': 'text/html; charset=UTF-8',
+          'Access-Control-Allow-Origin': '*',
+        },
+      })
+
+      axios
+        .get(url)
+        .then(function (response) {
+          var aa = JSON.stringify(response)
+          console.log(aa)
+          alert(aa)
+        })
+        .catch(function (error) {
+          alert(22222221)
+        })
+    </script>
+  </body>
+</html>
